@@ -1,0 +1,191 @@
+program MessageConverter;
+//Daniel Marker
+//Converts an ascii string into the format used
+
+
+{$APPTYPE CONSOLE}
+
+uses SysUtils;
+
+procedure Convert(Input:String; LineLength:Integer);
+var
+  OutputFile: TextFile;
+  Counter,Counter2 : Integer;
+  StringPointer: Integer;
+  OutputNo     : Integer;
+begin
+  AssignFile(OutputFile,'Output.txt');
+  Rewrite(OutputFile);
+
+  StringPointer := 1;
+
+  For Counter := 0 to Trunc(length(Input)/LineLength) do
+   begin
+    Write(OutputFile,'DB ');
+    For Counter2 := 0 to LineLength do
+    begin
+      if (not(StringPointer > length(Input))) then
+      begin
+        case Input[StringPointer] of
+        ' ' : OutputNo := 129;
+        '!' : OutputNo := 130;
+        '"' : OutputNo := 131;
+        '#' : OutputNo := 132;
+        '$' : OutputNo := 133;
+        '%' : OutputNo := 134;
+        '&' : OutputNo := 135;
+        '''': OutputNo := 136;
+        '(' : OutputNo := 137;
+        ')' : OutputNo := 138;
+        '*' : OutputNo := 139;
+        '+' : OutputNo := 140;
+        ',' : OutputNo := 141;
+        '-' : OutputNo := 142;
+        '.' : OutputNo := 143;
+        '/' : OutputNo := 144;
+        '0' : OutputNo := 145;
+        '1' : OutputNo := 146;
+        '2' : OutputNo := 147;
+        '3' : OutputNo := 148;
+        '4' : OutputNo := 149;
+        '5' : OutputNo := 150;
+        '6' : OutputNo := 151;
+        '7' : OutputNo := 152;
+        '8' : OutputNo := 153;
+        '9' : OutputNo := 154;
+        ':' : OutputNo := 155;
+        ';' : OutputNo := 156;
+        '<' : OutputNo := 157;
+        '=' : OutputNo := 158;
+        '>' : OutputNo := 159;
+        '?' : OutputNo := 160;
+        '@' : OutputNo := 161;
+        'A' : OutputNo := 162;
+        'B' : OutputNo := 163;
+        'C' : OutputNo := 164;
+        'D' : OutputNo := 165;
+        'E' : OutputNo := 166;
+        'F' : OutputNo := 167;
+        'G' : OutputNo := 168;
+        'H' : OutputNo := 169;
+        'I' : OutputNo := 170;
+        'J' : OutputNo := 171;
+        'K' : OutputNo := 172;
+        'L' : OutputNo := 173;
+        'M' : OutputNo := 174;
+        'N' : OutputNo := 175;
+        'O' : OutputNo := 176;
+        'P' : OutputNo := 177;
+        'Q' : OutputNo := 178;
+        'R' : OutputNo := 179;
+        'S' : OutputNo := 180;
+        'T' : OutputNo := 181;
+        'U' : OutputNo := 182;
+        'V' : OutputNo := 183;
+        'W' : OutputNo := 184;
+        'X' : OutputNo := 185;
+        'Y' : OutputNo := 186;
+        'Z' : OutputNo := 187;
+        '[' : OutputNo := 188;
+        '\' : OutputNo := 189;
+        ']' : OutputNo := 190;
+        '^' : OutputNo := 191;
+        '_' : OutputNo := 192;
+        '`' : OutputNo := 193;
+        'a' : OutputNo := 194;
+        'b' : OutputNo := 195;
+        'c' : OutputNo := 196;
+        'd' : OutputNo := 197;
+        'e' : OutputNo := 198;
+        'f' : OutputNo := 199;
+        'g' : OutputNo := 200;
+        'h' : OutputNo := 201;
+        'i' : OutputNo := 202;
+        'j' : OutputNo := 203;
+        'k' : OutputNo := 204;
+        'l' : OutputNo := 205;
+        'm' : OutputNo := 206;
+        'n' : OutputNo := 207;
+        'o' : OutputNo := 208;
+        'p' : OutputNo := 209;
+        'q' : OutputNo := 210;
+        'r' : OutputNo := 211;
+        's' : OutputNo := 212;
+        't' : OutputNo := 213;
+        'u' : OutputNo := 214;
+        'v' : OutputNo := 215;
+        'w' : OutputNo := 216;
+        'x' : OutputNo := 217;
+        'y' : OutputNo := 218;
+        'z' : OutputNo := 219;
+        '{' : OutputNo := 220;
+        '|' : OutputNo := 221;
+        '}' : OutputNo := 222;
+        '~' : OutputNo := 223;
+        end;
+
+        Write(OutputFile,IntToStr(OutputNo));
+        If(Counter2 <> LineLength) then
+          Write(OutputFile, ',');
+        StringPointer := StringPointer +1;
+      end;
+    end;
+    if (StringPointer > length(Input)) then
+      Write(OutputFile,'128');
+    Writeln(OutputFile,'');
+   end;
+
+   CloseFile(OutputFile);
+end;
+
+var
+  PortraitMode : Boolean;
+  ValidInput   : Boolean;
+  Input        : String;
+begin
+  PortraitMode := False;
+  ValidInput   := False;
+
+  While(ValidInput <> True) do
+  begin
+    Write('Is the text going to be output in portrait mode? (Y/N)');
+    Readln(Input);
+    Input := UpperCase(Input);
+    If (Input = 'Y') then
+    begin
+      PortraitMode := True;
+      ValidInput := True;
+    end
+    Else if (Input = 'N') then
+    begin
+      PortraitMode := False;
+      ValidInput := True;
+    end;
+  end;
+
+
+  ValidInput := False;
+  While(ValidInput <> True) do
+  begin
+    Write('What is the string that needs to be translated? ');
+    Readln(Input);
+
+    If (length(Input) > 255) then
+    begin
+      Writeln('The string is too long');
+      Writeln('The limit is 255 characters');
+      Writeln;
+    end
+    else
+      ValidInput := True;
+  end;
+
+
+  If (PortraitMode) then
+   Convert(Input,15)
+  Else
+    Convert(Input,18);
+
+    
+  Readln;
+end.

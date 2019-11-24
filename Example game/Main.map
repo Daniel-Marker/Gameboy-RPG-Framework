@@ -1,0 +1,867 @@
+ROM Bank #0 (HOME):
+  SECTION: $3BFC-$3CFB ($0100 bytes) ["UncrossableTiles"]
+           $3BFC = UncrossableTiles
+  SECTION: $3A15-$3BFB ($01E7 bytes) ["GBT_BANK0"]
+           $3A15 = gbt_get_pattern_ptr
+           $3AF0 = gbt_stop
+           $3A37 = gbt_play
+           $3AEC = gbt_loop
+           $3AFF = gbt_update
+           $3AE3 = gbt_pause
+           $3AFB = gbt_enable_channels
+  SECTION: $0000-$0002 ($0003 bytes) ["Org $00"]
+  SECTION: $0008-$000A ($0003 bytes) ["Org $08"]
+  SECTION: $0010-$0012 ($0003 bytes) ["Org $10"]
+  SECTION: $0018-$001A ($0003 bytes) ["Org $18"]
+  SECTION: $0020-$0022 ($0003 bytes) ["Org $20"]
+  SECTION: $0028-$002A ($0003 bytes) ["Org $28"]
+  SECTION: $0030-$0032 ($0003 bytes) ["Org $30"]
+  SECTION: $0038-$003A ($0003 bytes) ["Org $38"]
+  SECTION: $0040-$0043 ($0004 bytes) ["V-Blank IRQ Vector"]
+  SECTION: $0048-$0048 ($0001 bytes) ["LCD IRQ Vector"]
+  SECTION: $0050-$0050 ($0001 bytes) ["Timer IRQ Vector"]
+  SECTION: $0058-$0058 ($0001 bytes) ["Serial IRQ Vector"]
+  SECTION: $0060-$0060 ($0001 bytes) ["Joypad IRQ Vector"]
+  SECTION: $0100-$014F ($0050 bytes) ["Start"]
+  SECTION: $0150-$0215 ($00C6 bytes) ["Program Start"]
+           $0150 = Start
+           $01F9 = Main
+  SECTION: $0216-$3A14 ($37FF bytes) ["Support Routines"]
+           $1BC2 = USE_POTION
+           $19CD = USE_RETURN
+           $19D8 = USE_ATK_EQUIP
+           $19FA = USE_DEF_EQUIP
+           $1A1C = USE_GEN_EQUIP
+           $1AF4 = USE_DEFAULT
+           $2C9A = DefaultEncounter
+           $1F3B = COMBAT_MAIN_INIT_RET
+           $2C9B = Boss1Encounter
+           $2CA4 = Boss2Encounter
+           $2CAD = FinalBossEncounter
+           $2D52 = TITLESCREEN
+           $0EA3 = MAIN_EVENT_END
+           $2F3D = MAP1_EVENT1
+           $2F82 = MAP1_EVENT2
+           $2FBC = MAP1_EVENT3
+           $2FF2 = MAP1_EVENT4
+           $302F = MAP1_EVENT5
+           $3058 = MAP1_EVENT6
+           $305C = MAP1_EVENT7
+           $3083 = MAP1_EVENT8
+           $30AA = MAP1_EVENT9
+           $2D51 = BLANK_MAP_EVENT
+           $3111 = MAP2_EVENT6
+           $3168 = MAP2_EVENT7
+           $31D4 = MAP3_EVENT1
+           $320B = MAP3_EVENT2
+           $3241 = MAP3_EVENT4
+           $3278 = MAP3_EVENT5
+           $3489 = MAP4_EVENT1
+           $34BF = MAP4_EVENT2
+           $34F6 = MAP4_EVENT3
+           $34FA = MAP4_EVENT4
+           $3521 = MAP4_EVENT5
+           $3548 = MAP5_EVENT1
+           $358F = MAP5_EVENT2
+           $35D0 = MAP5_EVENT3
+           $3638 = MAP5_EVENT7
+           $3681 = MAP5_EVENT9
+           $3746 = MAP6_EVENT1
+           $377D = MAP6_EVENT3
+           $11CE = NEW_gbt_update
+           $0216 = RAM_CLEAR
+           $0225 = OAM_CLEAR
+           $0372 = MAP_INITIALISE
+           $0F43 = WINDOW_LOAD
+           $0FEC = PORTRAIT_LOAD
+           $0F4C = FRAME_LOAD
+           $0230 = LOAD_TILES
+           $027B = MAP_MUSIC
+           $0EA4 = READ_JOYPAD
+           $0E34 = MAIN_EVENT
+           $11E7 = MENU
+           $0575 = MAP_UPDATE
+           $0239 = WAIT_VBLANK
+           $024F = Multiply
+           $0347 = MAP_MUSIC_BANK_3
+           $0362 = MAP_MUSIC_DEFAULT
+           $036A = MAP_MUSIC_END
+           $026B = MAP_CLEAR
+           $047B = MAP_INITIALISE_GT32
+           $0776 = MAP_UPDATE_NORM
+           $0617 = MAP32_UPDATE_DOWN
+           $068D = MAP32_UPDATE_LEFT
+           $06FF = MAP32_UPDATE_RIGHT
+           $0927 = MAP_UPDATE_DOWN
+           $0AC6 = MAP_UPDATE_LEFT
+           $0C6B = MAP_UPDATE_RIGHT
+           $0F24 = JOY_FALSE
+           $025D = DIVIDE
+           $0F36 = RANDOMISE
+           $0F5D = FRAME_LOAD_RESET
+           $0F83 = ACTIVE_FRAME_LOAD_RESET
+           $0FB3 = PORTRAIT_FRAME_INC
+           $1055 = MESSAGE_HL_14_INC
+           $0FBA = FRAME_CLEAR
+           $1061 = MESSAGE_LONG_OUTPUT
+           $0241 = DELAY
+           $0EFC = JOY_A
+           $1010 = MESSAGE_OUTPUT
+           $0F06 = JOY_B
+           $0F8C = PORTRAIT_FRAME_CLEAR
+           $1120 = PORTRAIT_MESSAGE_LONG_OUTPUT
+           $1114 = PORTRAIT_MESSAGE_HL_17_INC
+           $10D0 = PORTRAIT_MESSAGE_OUTPUT
+           $11AB = BcdConvert_GTE100
+           $11A7 = BcdConvertEnd
+           $11A1 = BcdConvertLoop
+           $11BF = BcdConvert_GTE200
+           $1194 = BcdConvert
+           $0F66 = ACTIVE_FRAME_LOAD
+           $12C1 = MENU_ITEMS
+           $163B = MENU_PARTY
+           $1817 = MENU_SAVE
+           $150A = MENU_ITEMS_COMBAT_USE_REM2
+           $1219 = MENU_LOOP
+           $13D2 = ITEM_OUTPUT_DONE
+           $118E = BcdConvert_init
+           $134C = ITEM_OUTPUT_LOOP
+           $158F = MENU_ITEMS_PAGE_UP
+           $15D1 = MENU_ITEMS_PAGE_DOWN
+           $1261 = MENU_LOOP_ESCAPE
+           $15FC = MENU_ITEMS_CURSOR_UP
+           $160C = MENU_ITEMS_CURSOR_DOWN
+           $1586 = MENU_ITEMS_EMPTY
+           $198C = INVENTORY_REMOVE
+           $2B5C = COMBAT_ENEMY_SHOW
+           $28E4 = COMBAT_ENEMY_ATTACK_GENERATE
+           $2361 = COMBAT_ENEMY_TURN
+           $12EB = ITEMCODE_LOOP_INIT
+           $1460 = MENU_ITEMS_LOOP
+           $153C = MENU_JUMP_TO_ITEMCODE_LOOP
+           $2BE6 = PLAYER_STATS_CALC
+           $1918 = SAVE_SAVE
+           $14C4 = MENU_ITEMS_USE_REM
+           $14CF = MENU_ITEMS_COMBAT_USE_REM
+           $195A = INVENTORY_ADD
+           $2C1A = WAIT_FOR_A_OR_B
+           $2B79 = COMBAT_UPDATE_HEALTH
+           $0FE1 = RAM_MESSAGE_CLEAR
+           $2B4C = COMBAT_ENEMY_HIDE
+           $1FDB = COMBAT_CURSOR_UPDATE
+           $201D = COMBAT_ATTACK
+           $26A7 = COMBAT_MOVES
+           $28A6 = COMBAT_ITEMS
+           $28B5 = COMBAT_ESCAPE
+           $1F66 = COMBAT_MAIN
+           $2078 = COMBAT_PLAYER_TURN
+           $1F11 = COMBAT_MAIN_INIT
+           $2317 = UPDATE_HP_OUT
+           $2998 = COMBAT_END_ENEMY
+           $265D = COMBAT_ENEMY_UPDATE_HP_OUT
+           $2B1F = COMBAT_END_PLAYER
+           $27FC = COMBAT_MOVES_LEFT
+           $2832 = COMBAT_MOVES_RIGHT
+           $2868 = COMBAT_MOVES_UP
+           $2878 = COMBAT_MOVES_DOWN
+           $2785 = COMBAT_MOVES_MAIN
+           $26D0 = COUNT_LOOP_INIT
+           $0F27 = RANDOM_NUM
+           $2B38 = COMBAT_END_ESCAPE
+           $2C28 = FADE_SPRITES_WHITE
+           $2C47 = FADE_BLACK
+           $2ED8 = TITLESCREEN_CON
+           $18B2 = SAVE_CHECK
+           $2E38 = TITLESCREEN_NEW_DEL_NEW
+           $1901 = SAVE_DELETE
+           $18E6 = SAVE_LOAD
+           $2BE1 = COMBAT_INIT_0
+           $1CFA = COMBAT
+           $0FF8 = ACTIVE_PORTRAIT_LOAD
+           $3472 = MAP3_EVENT5_BUY_TALK_LOOP_ESCAPE
+           $3453 = MAP3_EVENT5_TALK
+           $33DE = ITEMSHOP_ESCAPE
+           $33BE = ITEMSHOP_UP
+           $33CE = ITEMSHOP_DOWN
+           $3413 = ITEMSHOP_NOT_ENOUGH
+           $32F0 = MAP3_EVENT5_BUY
+           $3324 = ITEMSHOP_LOOP
+           $329F = MAP3_EVENT5_BUY_TALK_LOOP_INIT
+           $3872 = MAP6_EVENT3_EXIT
+           $3864 = MAP6_EVENT3_RUN
+           $384A = MAP6_EVENT3_COMBAT
+           $2C65 = FADE_BACKGROUND_BLACK
+           $2C7B = SLOW_FADE_BACKGROUND_WHITE
+           $148C = MENU_ITEMS_USE
+           $19A8 = REMOVE_CLEAR
+           $078A = MAP_UPDATE_UP
+           $05A5 = MAP32_UPDATE_UP
+           $31AA = MAP2_EVENT7_MAP1
+           $0591 = MAP32_UPDATE
+           $2DB5 = TITLESCREEN_NEW_DEL
+           $0E9E = MAIN_EVENT_RUN
+    SLACK: $03E4 bytes
+
+ROM Bank #1:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 1, Maps"]
+  SECTION: $4001-$6013 ($2013 bytes) ["Map 1"]
+           $4001 = Map1
+    SLACK: $1FEC bytes
+
+ROM Bank #2:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 2, Maps2"]
+  SECTION: $60EA-$68F4 ($080B bytes) ["Titlescreen"]
+           $60EA = TitleScreen
+  SECTION: $4001-$5079 ($1079 bytes) ["Maps 2&3"]
+           $4001 = Map2
+           $4842 = Map3
+  SECTION: $507A-$60E9 ($1070 bytes) ["Maps 5&6"]
+           $507A = Map5
+           $58CD = Map6
+    SLACK: $170B bytes
+
+ROM Bank #3:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 3, Tilesets"]
+  SECTION: $4F99-$54E8 ($0550 bytes) ["Tiles"]
+           $4F99 = maptiles
+  SECTION: $54E9-$5568 ($0080 bytes) ["Character"]
+           $54E9 = Character
+           $5549 = Chest
+  SECTION: $4001-$4F98 ($0F98 bytes) ["WindowData"]
+           $46A1 = WindowTiles
+           $4461 = Portrait1
+           $4065 = PortraitWindowFrame
+           $40C9 = MenuFrame
+           $4105 = LargeWindowFrame
+           $4001 = WindowFrame
+           $426D = StatusScreen
+           $43D5 = CombatHealthOut
+           $43FD = CombatFrame1
+           $44F1 = Boss1Portrait
+           $4E31 = ItemShop
+           $4581 = Boss2Portrait
+           $4611 = Boss3Portrait
+    SLACK: $2A97 bytes
+
+ROM Bank #4:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 4, Sound"]
+  SECTION: $4001-$4647 ($0647 bytes) ["GBT_BANK1"]
+           $462B = gbt_update_effects_bank1
+           $4610 = gbt_update_bank1
+           $4091 = gbt_frequencies
+           $4221 = gbt_channel_1_set_effect
+           $4121 = _gbt_get_freq_from_index
+           $41D5 = channel1_update_effects.dont_cut
+           $422F = gbt_channel_1_set_effect.gbt_ch1_jump_table
+           $424F = gbt_channel_1_set_effect.gbt_ch1_pan
+           $4257 = gbt_channel_1_set_effect.gbt_ch1_arpeggio
+           $4272 = gbt_channel_1_set_effect.gbt_ch1_cut_note
+           $45E7 = gbt_ch1234_nop
+           $45E9 = gbt_ch1234_jump_pattern
+           $45FA = gbt_ch1234_jump_position
+           $4608 = gbt_ch1234_speed
+           $4368 = gbt_channel_2_set_effect
+           $431C = channel2_update_effects.dont_cut
+           $4376 = gbt_channel_2_set_effect.gbt_ch2_jump_table
+           $4396 = gbt_channel_2_set_effect.gbt_ch2_pan
+           $439E = gbt_channel_2_set_effect.gbt_ch2_arpeggio
+           $43B9 = gbt_channel_2_set_effect.gbt_ch2_cut_note
+           $44D0 = gbt_channel_3_set_effect
+           $4454 = gbt_channel3_load_instrument
+           $4001 = gbt_wave
+           $4484 = channel3_update_effects.dont_cut
+           $44DE = gbt_channel_3_set_effect.gbt_ch3_jump_table
+           $44FE = gbt_channel_3_set_effect.gbt_ch3_pan
+           $4506 = gbt_channel_3_set_effect.gbt_ch3_arpeggio
+           $4521 = gbt_channel_3_set_effect.gbt_ch3_cut_note
+           $45AC = gbt_channel_4_set_effect
+           $4081 = gbt_noise
+           $45AA = channel4_update_effects.dont_cut
+           $45BA = gbt_channel_4_set_effect.gbt_ch4_jump_table
+           $45DA = gbt_channel_4_set_effect.gbt_ch4_pan
+           $45E2 = gbt_channel_4_set_effect.gbt_ch4_cut_note
+           $412D = gbt_channel_1_handle
+           $4277 = gbt_channel_2_handle
+           $43BE = gbt_channel_3_handle
+           $4526 = gbt_channel_4_handle
+           $41C0 = channel1_update_effects
+           $41A6 = channel1_refresh_registers
+           $4307 = channel2_update_effects
+           $42F0 = channel2_refresh_registers
+           $446B = channel3_update_effects
+           $442D = channel3_refresh_registers
+           $4595 = channel4_update_effects
+           $4583 = channel4_refresh_registers
+  SECTION: $4B2A-$4C41 ($0118 bytes) ["song_0"]
+           $4B2A = song_0
+  SECTION: $4648-$4791 ($014A bytes) ["song_1"]
+           $4648 = song_1
+  SECTION: $4792-$48DA ($0149 bytes) ["song_2"]
+           $4792 = song_2
+  SECTION: $48DB-$4A09 ($012F bytes) ["song_3"]
+           $48DB = song_3
+  SECTION: $4C42-$4C50 ($000F bytes) ["song_data"]
+           $4C42 = song_data
+  SECTION: $4A0A-$4B29 ($0120 bytes) ["range_test2_1"]
+           $4A0A = range_test2_1
+  SECTION: $4C51-$4C56 ($0006 bytes) ["range_test2_data"]
+           $4C51 = range_test2_data
+    SLACK: $33A9 bytes
+
+ROM Bank #5:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 5, Strings"]
+  SECTION: $4001-$4638 ($0638 bytes) ["Strings"]
+           $4038 = SaveMessage
+           $4026 = YouEquipped
+           $4001 = YouUsed
+           $4013 = ButItDid
+           $4331 = YouUsedThePotion
+           $434A = YouRegainedHealth
+           $406C = AWildAppeared
+           $40B6 = YouUse
+           $40C7 = YouAttacked
+           $40E5 = HealthShort
+           $40E8 = AttackShort
+           $40EC = DefenceShort
+           $40F0 = MagicAttackShort
+           $40F7 = MagicDefenceShort
+           $40FE = SpeedShort
+           $408B = YourStatRoseBy
+           $407E = YourStatFellBy
+           $40A7 = TheEnemyStatRoseBy
+           $4098 = TheEnemyStatFellBy
+           $40BE = TheEnemyUsed
+           $40D9 = TheEnemyAttacked
+           $4102 = YouCouldntGetAway
+           $4122 = YouHaveDefeated
+           $4137 = YouGotGoldAndExp
+           $4155 = YouLeveledUp
+           $4119 = YouDied
+           $4164 = YouEscaped
+           $4550 = Five
+           $4552 = Four
+           $4554 = Three
+           $4556 = Two
+           $4558 = One
+           $455A = Perish
+           $4170 = Warning
+           $41D4 = YesNo
+           $41F7 = SaveFile
+           $4235 = YouReadTheSign
+           $4248 = ItWarnsYou
+           $4214 = YouCant
+           $4264 = YourHealth
+           $4282 = BeCareful
+           $42CD = BossAhead
+           $42F1 = TakeThese
+           $4310 = YouGotTheSwordAndPotions
+           $4363 = BirdNoises
+           $437A = ItSeems
+           $43A5 = WelcomeToMyShop
+           $43ED = BuyTalk
+           $44AD = YouGotPotion
+           $44C0 = YouGotShield
+           $44D3 = YouGotAmulet
+           $440B = YouDontHaveEnough
+           $4433 = TheNextArea
+           $4484 = GoodLuck
+           $44E6 = TreeNoises
+           $44FD = OpenChest
+           $4510 = YouGotSwordPlus
+           $45BE = TheCreature
+           $45F7 = WillYouGive
+           $462B = ItThanksYou
+           $45E0 = ButYouHave
+           $4523 = OpenTheChest
+           $4544 = ThenPerish
+           $4561 = Fool
+           $4583 = YouHaveBested
+           $4595 = ThisWorld
+           $45B4 = ThankYou
+    SLACK: $39C7 bytes
+
+ROM Bank #6:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 6, Combat"]
+  SECTION: $69DD-$69E8 ($000C bytes) ["Player Growth"]
+           $69DD = HealthGrowRate
+           $69E7 = SpeedGrowRate
+           $69E3 = MagicAttackGrowRate
+           $69DF = AttackGrowRate
+           $69E1 = DefenceGrowRate
+           $69E5 = MagicDefenceGrowRate
+  SECTION: $68DE-$69DC ($00FF bytes) ["Experience required for each level"]
+           $68DE = ExpRequired
+  SECTION: $4001-$62DD ($22DD bytes) ["Enemy Data"]
+           $4001 = EnemyData
+  SECTION: $62DE-$68DD ($0600 bytes) ["Encounter type"]
+           $62DE = Encounter0
+    SLACK: $1617 bytes
+
+ROM Bank #7:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 7, Item database"]
+  SECTION: $4001-$5800 ($1800 bytes) ["Item database"]
+           $4001 = ITEM_DB
+  SECTION: $5801-$64F3 ($0CF3 bytes) ["Move Data"]
+           $5801 = MoveData
+    SLACK: $1B0C bytes
+
+ROM Bank #8:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 8, Enemy Tiles 1-40"]
+  SECTION: $7E81-$7ECB ($004B bytes) ["Enemy Tile layout"]
+           $7E81 = ENEMY_TILE_LAYOUT
+  SECTION: $4001-$7E80 ($3E80 bytes) ["Enemy Tiles Section 1"]
+           $4001 = Enemy1Tiles
+           $4191 = Enemy2Tiles
+           $4321 = Enemy3Tiles
+           $44B1 = Enemy4Tiles
+           $4641 = Enemy5Tiles
+           $47D1 = Enemy6Tiles
+           $4961 = Enemy7Tiles
+           $4AF1 = Enemy8Tiles
+           $4C81 = Enemy9Tiles
+           $4E11 = Enemy10Tiles
+           $4FA1 = Enemy11Tiles
+           $5131 = Enemy12Tiles
+           $52C1 = Enemy13Tiles
+           $5451 = Enemy14Tiles
+           $55E1 = Enemy15Tiles
+           $5771 = Enemy16Tiles
+           $5901 = Enemy17Tiles
+           $5A91 = Enemy18Tiles
+           $5C21 = Enemy19Tiles
+           $5DB1 = Enemy20Tiles
+           $5F41 = Enemy21Tiles
+           $60D1 = Enemy22Tiles
+           $6261 = Enemy23Tiles
+           $63F1 = Enemy24Tiles
+           $6581 = Enemy25Tiles
+           $6711 = Enemy26Tiles
+           $68A1 = Enemy27Tiles
+           $6A31 = Enemy28Tiles
+           $6BC1 = Enemy29Tiles
+           $6D51 = Enemy30Tiles
+           $6EE1 = Enemy31Tiles
+           $7071 = Enemy32Tiles
+           $7201 = Enemy33Tiles
+           $7391 = Enemy34Tiles
+           $7521 = Enemy35Tiles
+           $76B1 = Enemy36Tiles
+           $7841 = Enemy37Tiles
+           $79D1 = Enemy38Tiles
+           $7B61 = Enemy39Tiles
+           $7CF1 = Enemy40Tiles
+    SLACK: $0134 bytes
+
+ROM Bank #9:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 9, Enemy Tiles 41-80"]
+  SECTION: $4001-$7E80 ($3E80 bytes) ["Enemy Tiles Section 2"]
+           $4001 = Enemy41Tiles
+           $4191 = Enemy42Tiles
+           $4321 = Enemy43Tiles
+           $44B1 = Enemy44Tiles
+           $4641 = Enemy45Tiles
+           $47D1 = Enemy46Tiles
+           $4961 = Enemy47Tiles
+           $4AF1 = Enemy48Tiles
+           $4C81 = Enemy49Tiles
+           $4E11 = Enemy50Tiles
+           $4FA1 = Enemy51Tiles
+           $5131 = Enemy52Tiles
+           $52C1 = Enemy53Tiles
+           $5451 = Enemy54Tiles
+           $55E1 = Enemy55Tiles
+           $5771 = Enemy56Tiles
+           $5901 = Enemy57Tiles
+           $5A91 = Enemy58Tiles
+           $5C21 = Enemy59Tiles
+           $5DB1 = Enemy60Tiles
+           $5F41 = Enemy61Tiles
+           $60D1 = Enemy62Tiles
+           $6261 = Enemy63Tiles
+           $63F1 = Enemy64Tiles
+           $6581 = Enemy65Tiles
+           $6711 = Enemy66Tiles
+           $68A1 = Enemy67Tiles
+           $6A31 = Enemy68Tiles
+           $6BC1 = Enemy69Tiles
+           $6D51 = Enemy70Tiles
+           $6EE1 = Enemy71Tiles
+           $7071 = Enemy72Tiles
+           $7201 = Enemy73Tiles
+           $7391 = Enemy74Tiles
+           $7521 = Enemy75Tiles
+           $76B1 = Enemy76Tiles
+           $7841 = Enemy77Tiles
+           $79D1 = Enemy78Tiles
+           $7B61 = Enemy79Tiles
+           $7CF1 = Enemy80Tiles
+    SLACK: $017F bytes
+
+ROM Bank #10:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 10, Enemy Tiles 81-120"]
+  SECTION: $4001-$7E80 ($3E80 bytes) ["Enemy Tiles Section 3"]
+           $4001 = Enemy81Tiles
+           $4191 = Enemy82Tiles
+           $4321 = Enemy83Tiles
+           $44B1 = Enemy84Tiles
+           $4641 = Enemy85Tiles
+           $47D1 = Enemy86Tiles
+           $4961 = Enemy87Tiles
+           $4AF1 = Enemy88Tiles
+           $4C81 = Enemy89Tiles
+           $4E11 = Enemy90Tiles
+           $4FA1 = Enemy91Tiles
+           $5131 = Enemy92Tiles
+           $52C1 = Enemy93Tiles
+           $5451 = Enemy94Tiles
+           $55E1 = Enemy95Tiles
+           $5771 = Enemy96Tiles
+           $5901 = Enemy97Tiles
+           $5A91 = Enemy98Tiles
+           $5C21 = Enemy99Tiles
+           $5DB1 = Enemy100Tiles
+           $5F41 = Enemy101Tiles
+           $60D1 = Enemy102Tiles
+           $6261 = Enemy103Tiles
+           $63F1 = Enemy104Tiles
+           $6581 = Enemy105Tiles
+           $6711 = Enemy106Tiles
+           $68A1 = Enemy107Tiles
+           $6A31 = Enemy108Tiles
+           $6BC1 = Enemy109Tiles
+           $6D51 = Enemy110Tiles
+           $6EE1 = Enemy111Tiles
+           $7071 = Enemy112Tiles
+           $7201 = Enemy113Tiles
+           $7391 = Enemy114Tiles
+           $7521 = Enemy115Tiles
+           $76B1 = Enemy116Tiles
+           $7841 = Enemy117Tiles
+           $79D1 = Enemy118Tiles
+           $7B61 = Enemy119Tiles
+           $7CF1 = Enemy120Tiles
+    SLACK: $017F bytes
+
+ROM Bank #11:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 11, Enemy Tiles 121-160"]
+  SECTION: $4001-$7E80 ($3E80 bytes) ["Enemy Tiles Section 4"]
+           $4001 = Enemy121Tiles
+           $4191 = Enemy122Tiles
+           $4321 = Enemy123Tiles
+           $44B1 = Enemy124Tiles
+           $4641 = Enemy125Tiles
+           $47D1 = Enemy126Tiles
+           $4961 = Enemy127Tiles
+           $4AF1 = Enemy128Tiles
+           $4C81 = Enemy129Tiles
+           $4E11 = Enemy130Tiles
+           $4FA1 = Enemy131Tiles
+           $5131 = Enemy132Tiles
+           $52C1 = Enemy133Tiles
+           $5451 = Enemy134Tiles
+           $55E1 = Enemy135Tiles
+           $5771 = Enemy136Tiles
+           $5901 = Enemy137Tiles
+           $5A91 = Enemy138Tiles
+           $5C21 = Enemy139Tiles
+           $5DB1 = Enemy140Tiles
+           $5F41 = Enemy141Tiles
+           $60D1 = Enemy142Tiles
+           $6261 = Enemy143Tiles
+           $63F1 = Enemy144Tiles
+           $6581 = Enemy145Tiles
+           $6711 = Enemy146Tiles
+           $68A1 = Enemy147Tiles
+           $6A31 = Enemy148Tiles
+           $6BC1 = Enemy149Tiles
+           $6D51 = Enemy150Tiles
+           $6EE1 = Enemy151Tiles
+           $7071 = Enemy152Tiles
+           $7201 = Enemy153Tiles
+           $7391 = Enemy154Tiles
+           $7521 = Enemy155Tiles
+           $76B1 = Enemy156Tiles
+           $7841 = Enemy157Tiles
+           $79D1 = Enemy158Tiles
+           $7B61 = Enemy159Tiles
+           $7CF1 = Enemy160Tiles
+    SLACK: $017F bytes
+
+ROM Bank #12:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 12, Enemy Tiles 161-200"]
+  SECTION: $4001-$7E80 ($3E80 bytes) ["Enemy Tiles Section 5"]
+           $4001 = Enemy161Tiles
+           $4191 = Enemy162Tiles
+           $4321 = Enemy163Tiles
+           $44B1 = Enemy164Tiles
+           $4641 = Enemy165Tiles
+           $47D1 = Enemy166Tiles
+           $4961 = Enemy167Tiles
+           $4AF1 = Enemy168Tiles
+           $4C81 = Enemy169Tiles
+           $4E11 = Enemy170Tiles
+           $4FA1 = Enemy171Tiles
+           $5131 = Enemy172Tiles
+           $52C1 = Enemy173Tiles
+           $5451 = Enemy174Tiles
+           $55E1 = Enemy175Tiles
+           $5771 = Enemy176Tiles
+           $5901 = Enemy177Tiles
+           $5A91 = Enemy178Tiles
+           $5C21 = Enemy179Tiles
+           $5DB1 = Enemy180Tiles
+           $5F41 = Enemy181Tiles
+           $60D1 = Enemy182Tiles
+           $6261 = Enemy183Tiles
+           $63F1 = Enemy184Tiles
+           $6581 = Enemy185Tiles
+           $6711 = Enemy186Tiles
+           $68A1 = Enemy187Tiles
+           $6A31 = Enemy188Tiles
+           $6BC1 = Enemy189Tiles
+           $6D51 = Enemy190Tiles
+           $6EE1 = Enemy191Tiles
+           $7071 = Enemy192Tiles
+           $7201 = Enemy193Tiles
+           $7391 = Enemy194Tiles
+           $7521 = Enemy195Tiles
+           $76B1 = Enemy196Tiles
+           $7841 = Enemy197Tiles
+           $79D1 = Enemy198Tiles
+           $7B61 = Enemy199Tiles
+           $7CF1 = Enemy200Tiles
+    SLACK: $017F bytes
+
+ROM Bank #13:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 13, Enemy Tiles 201-240"]
+  SECTION: $4001-$7E80 ($3E80 bytes) ["Enemy Tiles Section 6"]
+           $4001 = Enemy201Tiles
+           $4191 = Enemy202Tiles
+           $4321 = Enemy203Tiles
+           $44B1 = Enemy204Tiles
+           $4641 = Enemy205Tiles
+           $47D1 = Enemy206Tiles
+           $4961 = Enemy207Tiles
+           $4AF1 = Enemy208Tiles
+           $4C81 = Enemy209Tiles
+           $4E11 = Enemy210Tiles
+           $4FA1 = Enemy211Tiles
+           $5131 = Enemy212Tiles
+           $52C1 = Enemy213Tiles
+           $5451 = Enemy214Tiles
+           $55E1 = Enemy215Tiles
+           $5771 = Enemy216Tiles
+           $5901 = Enemy217Tiles
+           $5A91 = Enemy218Tiles
+           $5C21 = Enemy219Tiles
+           $5DB1 = Enemy220Tiles
+           $5F41 = Enemy221Tiles
+           $60D1 = Enemy222Tiles
+           $6261 = Enemy223Tiles
+           $63F1 = Enemy224Tiles
+           $6581 = Enemy225Tiles
+           $6711 = Enemy226Tiles
+           $68A1 = Enemy227Tiles
+           $6A31 = Enemy228Tiles
+           $6BC1 = Enemy229Tiles
+           $6D51 = Enemy230Tiles
+           $6EE1 = Enemy231Tiles
+           $7071 = Enemy232Tiles
+           $7201 = Enemy233Tiles
+           $7391 = Enemy234Tiles
+           $7521 = Enemy235Tiles
+           $76B1 = Enemy236Tiles
+           $7841 = Enemy237Tiles
+           $79D1 = Enemy238Tiles
+           $7B61 = Enemy239Tiles
+           $7CF1 = Enemy240Tiles
+    SLACK: $017F bytes
+
+ROM Bank #14:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 14, Enemy Tiles 241-255"]
+  SECTION: $4001-$5770 ($1770 bytes) ["Enemy Tiles Section 7"]
+           $4001 = Enemy241Tiles
+           $4191 = Enemy242Tiles
+           $4321 = Enemy243Tiles
+           $44B1 = Enemy244Tiles
+           $4641 = Enemy245Tiles
+           $47D1 = Enemy246Tiles
+           $4961 = Enemy247Tiles
+           $4AF1 = Enemy248Tiles
+           $4C81 = Enemy249Tiles
+           $4E11 = Enemy250Tiles
+           $4FA1 = Enemy251Tiles
+           $5131 = Enemy252Tiles
+           $52C1 = Enemy253Tiles
+           $5451 = Enemy254Tiles
+           $55E1 = Enemy255Tiles
+    SLACK: $288F bytes
+
+ROM Bank #15:
+  SECTION: $4000-$4000 ($0001 bytes) ["Bank 15, Unused"]
+  SECTION: $4001-$7FEF ($3FEF bytes) ["Map4"]
+           $4001 = Map4
+    SLACK: $0010 bytes
+
+WRAM Bank #0:
+  SECTION: $C3C4-$C404 ($0041 bytes) ["GBT_VAR_1"]
+           $C3C7 = gbt_pattern_array_bank
+           $C3C5 = gbt_pattern_array_ptr
+           $C3DB = gbt_current_step_data_bank
+           $C3D9 = gbt_current_step_data_ptr
+           $C3C8 = gbt_speed
+           $C3D7 = gbt_current_step
+           $C3D8 = gbt_current_pattern
+           $C3D6 = gbt_ticks_elapsed
+           $C3D5 = gbt_loop_enabled
+           $C403 = gbt_have_to_stop_next_step
+           $C404 = gbt_update_pattern_pointers
+           $C3EF = gbt_channel3_loaded_instrument
+           $C3DC = gbt_channels_enabled
+           $C3DD = gbt_pan
+           $C3E1 = gbt_vol
+           $C3E5 = gbt_instr
+           $C3E9 = gbt_freq
+           $C3F9 = gbt_arpeggio_enabled
+           $C3FF = gbt_cut_note_tick
+           $C3C4 = gbt_playing
+           $C3C9 = gbt_temp_play_data
+           $C3F0 = gbt_arpeggio_freq_index
+           $C3FC = gbt_arpeggio_tick
+  SECTION: $C000-$C3C3 ($03C4 bytes) ["RAM Vars"]
+           $C03C = MAP_X
+           $C03D = MAP_Y
+           $C03E = CURR_MAP_BANK
+           $C080 = GAMESTATE
+           $C041 = joypad_pressed
+           $C040 = joypad_down
+           $C034 = CURR_MAP_ADR
+           $C037 = CURR_MAP_WIDTH
+           $C036 = CURR_MAP_HEIGHT
+           $C038 = CURR_MAP_EVENTMP_ADR
+           $C03A = CURR_MAP_EVENTS_ADR
+           $C000 = EVENT_PERMANENCE
+           $C044 = RANDOM_NO_SEED
+           $C03F = PLAYER_DIR
+           $C020 = NEW_TILES
+           $C043 = RANDOM_NO
+           $C04A = RAM_MESSAGE
+           $C045 = MESSAGE_END_D
+           $C046 = MESSAGE_END_E
+           $C048 = upper_result
+           $C049 = lower_result
+           $C081 = CURSOR_STATE
+           $C280 = ITEMCODE_DISP
+           $C082 = INVENTORY
+           $C2AA = TOP_ITEMCODE
+           $C2A0 = CUR_ITEM_NAME
+           $C047 = input
+           $C2AF = CALC_MAXHEALTH
+           $C2B5 = ATTACK_ITEM
+           $C2AC = HEALTH
+           $C2C2 = GOLD
+           $C2B6 = DEFENCE_ITEM
+           $C2B7 = GENERAL_ITEM
+           $C2C5 = COMBAT_MOVES_LIST
+           $C2AD = LEVEL
+           $C2B9 = ENEMY_NO
+           $C2BB = ENEMY_HEALTH
+           $C2BA = ENEMY_LEVEL
+           $C2C1 = ENEMY_MAXHEALTH
+           $C2B0 = CALC_ATTACK
+           $C2B4 = CALC_SPEED
+           $C2C0 = ENEMY_SPEED
+           $C2BD = ENEMY_DEFENCE
+           $C2BF = ENEMY_MAGIC_DEFENCE
+           $C2B2 = CALC_MAGIC_ATTACK
+           $C2B1 = CALC_DEFENCE
+           $C2BC = ENEMY_ATTACK
+           $C2B3 = CALC_MAGIC_DEFENCE
+           $C2BE = ENEMY_MAGIC_ATTACK
+           $C2C3 = MOVES_LIST_PTR
+           $C2AE = EXP
+           $C2B8 = COMBAT_INIT_BYTE
+           $C042 = COUNTER
+    SLACK: $0BFB bytes
+
+WRAM Bank #1:
+  EMPTY
+
+WRAM Bank #2:
+  EMPTY
+
+WRAM Bank #3:
+  EMPTY
+
+WRAM Bank #4:
+  EMPTY
+
+WRAM Bank #5:
+  EMPTY
+
+WRAM Bank #6:
+  EMPTY
+
+WRAM Bank #7:
+  EMPTY
+
+VRAM Bank #0:
+  EMPTY
+
+VRAM Bank #1:
+  EMPTY
+
+OAM:
+  EMPTY
+
+HRAM:
+  EMPTY
+
+SRAM Bank #0:
+  EMPTY
+
+SRAM Bank #1:
+  EMPTY
+
+SRAM Bank #2:
+  EMPTY
+
+SRAM Bank #3:
+  EMPTY
+
+SRAM Bank #4:
+  EMPTY
+
+SRAM Bank #5:
+  EMPTY
+
+SRAM Bank #6:
+  EMPTY
+
+SRAM Bank #7:
+  EMPTY
+
+SRAM Bank #8:
+  EMPTY
+
+SRAM Bank #9:
+  EMPTY
+
+SRAM Bank #10:
+  EMPTY
+
+SRAM Bank #11:
+  EMPTY
+
+SRAM Bank #12:
+  EMPTY
+
+SRAM Bank #13:
+  EMPTY
+
+SRAM Bank #14:
+  EMPTY
+
+SRAM Bank #15:
+  EMPTY
+
