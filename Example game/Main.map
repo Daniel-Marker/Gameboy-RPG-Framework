@@ -292,21 +292,31 @@ ROM Bank #4:
            $442D = channel3_refresh_registers
            $4595 = channel4_update_effects
            $4583 = channel4_refresh_registers
-  SECTION: $4B2A-$4C41 ($0118 bytes) ["song_0"]
-           $4B2A = song_0
+  SECTION: $4D9E-$4EB5 ($0118 bytes) ["song_0"]
+           $4D9E = song_0
   SECTION: $4648-$4791 ($014A bytes) ["song_1"]
            $4648 = song_1
   SECTION: $4792-$48DA ($0149 bytes) ["song_2"]
            $4792 = song_2
-  SECTION: $48DB-$4A09 ($012F bytes) ["song_3"]
-           $48DB = song_3
-  SECTION: $4C42-$4C50 ($000F bytes) ["song_data"]
-           $4C42 = song_data
-  SECTION: $4A0A-$4B29 ($0120 bytes) ["range_test2_1"]
-           $4A0A = range_test2_1
-  SECTION: $4C51-$4C56 ($0006 bytes) ["range_test2_data"]
-           $4C51 = range_test2_data
-    SLACK: $33A9 bytes
+  SECTION: $4B4F-$4C7D ($012F bytes) ["song_3"]
+           $4B4F = song_3
+  SECTION: $4FB6-$4FC4 ($000F bytes) ["song_data"]
+           $4FB6 = song_data
+  SECTION: $4C7E-$4D9D ($0120 bytes) ["range_test2_1"]
+           $4C7E = range_test2_1
+  SECTION: $4FCE-$4FD3 ($0006 bytes) ["range_test2_data"]
+           $4FCE = range_test2_data
+  SECTION: $48DB-$4A14 ($013A bytes) ["thing1_0"]
+           $48DB = thing1_0
+  SECTION: $4A15-$4B4E ($013A bytes) ["thing1_1"]
+           $4A15 = thing1_1
+  SECTION: $4FC5-$4FCD ($0009 bytes) ["thing1_data"]
+           $4FC5 = thing1_data
+  SECTION: $4EB6-$4FB5 ($0100 bytes) ["nothing_0"]
+           $4EB6 = nothing_0
+  SECTION: $4FD4-$4FD9 ($0006 bytes) ["nothing_data"]
+           $4FD4 = nothing_data
+    SLACK: $3026 bytes
 
 ROM Bank #5:
   SECTION: $4000-$4000 ($0001 bytes) ["Bank 5, Strings"]

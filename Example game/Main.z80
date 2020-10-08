@@ -543,9 +543,9 @@ BANK2_MAP1:
 	MAP_MUSIC_CHECK
 	or a
 	jr nz, BANK2_MAP2
-	ld de, range_test2_data
-	ld bc, BANK(range_test2_data)
-	ld a, $05
+	ld de,nothing_data
+    ld bc,BANK(nothing_data)
+	ld a, $0a
 	jp MAP_MUSIC_END
 	
 BANK2_MAP2:
@@ -555,8 +555,8 @@ BANK2_MAP2:
 	MAP_MUSIC_CHECK
 	or a
 	jr nz, BANK2_MAP3
-	ld de, range_test2_data
-	ld bc, BANK(range_test2_data)
+	ld de,thing1_data
+    ld bc,BANK(thing1_data)
 	ld a, $05
 	jr MAP_MUSIC_END
 	
@@ -567,8 +567,8 @@ BANK2_MAP3:
 	MAP_MUSIC_CHECK
 	or a
 	jr nz, BANK2_MAP5
-	ld de, range_test2_data
-	ld bc, BANK(range_test2_data)
+	ld de,song_data
+    ld bc,BANK(song_data)
 	ld a, $05
 	jr MAP_MUSIC_END
 	
@@ -579,8 +579,8 @@ BANK2_MAP5:
 	MAP_MUSIC_CHECK
 	or a
 	jr nz, BANK2_MAP6
-	ld de, range_test2_data
-	ld bc, BANK(range_test2_data)
+	ld de,thing1_data
+    ld bc,BANK(thing1_data)
 	ld a, $05
 	jr MAP_MUSIC_END
 	
@@ -591,8 +591,8 @@ BANK2_MAP6:
 	MAP_MUSIC_CHECK
 	or a
 	jr nz, MAP_MUSIC_DEFAULT
-	ld de, range_test2_data
-	ld bc, BANK(range_test2_data)
+	ld de,song_data
+    ld bc,BANK(song_data)
 	ld a, $05
 	jr MAP_MUSIC_END
 
@@ -602,8 +602,8 @@ BANK3_MAP4:
 	MAP_MUSIC_CHECK
 	or a
 	jr nz, MAP_MUSIC_DEFAULT
-	ld de, range_test2_data
-	ld bc, BANK(range_test2_data)
+	ld de,song_data
+    ld bc,BANK(song_data)
 	ld a, $05
 	jr MAP_MUSIC_END
 	
